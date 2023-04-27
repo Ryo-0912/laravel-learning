@@ -1,6 +1,6 @@
-* 1. use Illuminate\Support\Facades\Log;
+1. use Illuminate\Support\Facades\Log;
 
-* 1. あとは、確認したいところに、以下のように記述するだけ。
+1. あとは、確認したいところに、以下のように記述するだけ。
 
 
 Log::info();
