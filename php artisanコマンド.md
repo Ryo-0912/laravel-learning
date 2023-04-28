@@ -1,7 +1,7 @@
 ## php artisan tinker
 [参考URL](https://e-seventh.com/laravel-tinker-ease-develop/)
 
-**tinker** で値を調べたいときは、名前空間から記述する。
+**tinker** で値を調べたいときは、**名前空間**から記述する。
 
 例1
 ```
