@@ -32,7 +32,7 @@ class Hello
 ```
 
 ## php artisan make:controller
-あるディレクトリ下にファイルを作成したいとき。
+あるディレクトリ下にcontrollerファイルを作成したいとき。
 
 ```
 php artisan make:controller Test/TestController  // ちゃんと最後に**Controller**つける！！
