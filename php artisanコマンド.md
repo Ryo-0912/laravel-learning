@@ -30,3 +30,12 @@ class Hello
      date: 2021-06-05 04:58:49.710927 UTC (+00:00),
    }
 ```
+
+## php artisan make:controller
+あるディレクトリ下にファイルを作成したいとき。
+
+```
+php artisan make:controller Test/TestController  // ちゃんと最後に**Controller**つける！！
+
+#=> app/Http/Controllers/Test/TestControler.php にファイル作成される。
+```
