@@ -1,4 +1,4 @@
-`True/False`がreturnされる場合のデータ型は`**bool型**`
+`True/False`がreturnされる場合のデータ型は`bool型`
 
 例
 
