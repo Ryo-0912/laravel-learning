@@ -37,7 +37,7 @@ oldヘルパーが機能しない例として、javascriptなどでページ遷�
 						<th>自己紹介</th>
 					</tr>
 					<tr>
-						<td><textarea class="form-control" id="publicBiography" name="biography" placeholder="得意科目は英語です。よろしくお願いします。" maxlength="1000">{{old('biography')}}</textarea></td>
+						<td><textarea class="form-control" id="publicBiography" name="biography" placeholder="得意科目は英語です。よろしくお願いします。" maxlength="1000">**{{old('biography')}}**</textarea></td>
 					</tr>
 					@foreach ($errors->get('biography') as $error)
 						<td class="row-2"><label class="text-danger">{{ $error }}</label></td>
