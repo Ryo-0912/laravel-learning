@@ -11,8 +11,8 @@ oldヘルパーが機能しない例として、javascriptなどでページ遷�
 
 @section('content')
 @include('web.layouts.registration-header', ['headerString' => '基本情報登録'])
-	<main id="main" role="main" class="create_account createPage">
-		<div class="smlWhiteBg">
+<main id="main" role="main" class="create_account createPage">
+  <div class="smlWhiteBg">
 			<form method="POST" action="{{ route('web.store.app-profile')}}" class="createForm createForm02" enctype="multipart/form-data">
         @csrf
 				<div class="comBtn pc"><a href="#" onclick="history.back(); return false;" class="backLink">{{__('labels.registration.back_step')}}</a></div>
