@@ -126,22 +126,21 @@ use Illuminate\Queue\SerializesModels;
 
 class WelcomeEmail extends Mailable
 {
-		// コンストラクタ
+    // コンストラクタ
     public function __construct(string $userName, string $planName, string $planPrice, $startDate)
     {
-				// メールで使う情報があれば主にコンストラクタの引数で受け取る
+	// メールで使う情報があれば主にコンストラクタの引数で受け取る
         // ここに定義したデータはbuildメソッド内のviewで使用することができる。
-
-　　　　　$this->userName = $userName;
+        $this->userName = $userName;
         $this->planName = $planName;
         $this->planPrice = $planPrice;
         $this->startDate = $startDate;
     }
 
-		// メールを送るメソッド
+    // メールを送るメソッド
     public function build()
     {
-				// メールを送る
+        // メールを送る
         return $this->to('aaa@example.com')             // 宛先
                     ->cc('bbb@example.com')             // CC
                     ->bcc('ccc@example.com')            // BCC
