@@ -1,0 +1,16 @@
+fileに関するバリデーションをかけるとき、次の3つのバリデーションを考える必要がある。
+
+1. フロントのバリデーション
+```
+let file = $("input[name='upload_file']").prop('files')[0];
+let fileSize = file.size;
+if(fileSize > 500000000)
+```
+
+2. サーバのファイル容量の許容値の設定 => 413 Request Entity Too Large
+
+
+3. バクエンドのバリデーション
+```
+'upload_file' => 'required|file|mimes:flv,mp4,f4v,ts,3g2,asf,rm,amc,m4v,mts,wmv,mov,mpg,mpeg,avi,3gp,mod|max:500000', // type=fileに対して、fileの大きさに関するバリデーションの単位は KB(キロバイト)。
+```
