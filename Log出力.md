@@ -6,3 +6,10 @@
 Log::info();
 Log::error(); etc
 ```
+
+上の1と2をまとめて次のように1行でもかける
+
+```
+\Log::info();
+\Log::error(); etc
+```
