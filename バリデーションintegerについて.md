@@ -128,4 +128,4 @@ local.ERROR: App\Http\UseCases\GetDetailMessageTemplateUseCase::__invoke(): Argu
 
 ***Laravelバリデーションのintegerは、該当パラメータが整数で構成された文字列か数値であるかをチェックしている***
 
-したがって、本来クエリストリングでリクエストを送っているので、Requestではstringとして認識しているが、バリデーションintegerはstring数字でもバリデーションを通過する。
+したがって、本来クエリストリングでリクエストを送っているので、Requestでは、message_template_id=1として送っていたとしても、message_template_idの値のデータ型はstringとして認識されるが、バリデーションintegerはstring型の数字でもバリデーションを通過する。
