@@ -60,61 +60,11 @@ use Illuminate\Http\JsonResponse;
 
 class MessageTemplateController extends ApiBaseController
 {
-    /**
-     * Get Message Template List API
-     * @author Kabir Gaire
-     * @param GetMessageTemplateListUseCase $getMessageTemplateListUseCase
-     * @return JsonResponse
-     */
-    public function getMessageTemplateList(GetMessageTemplateListUseCase $getMessageTemplateListUseCase): JsonResponse
-    {
-        return response()->json($getMessageTemplateListUseCase(
-            $this->user()->id,
-            (int) $this->user()->template_registration_flag
-        ));
-    }
+    略
 
-    /**
-     * Update Message Template Setting API
-     * @author Kabir Gaire
-     * @param UpdateMessageTemplateSettingUseCase $updateMessageTemplateSettingUseCase
-     * @param UpdateMessageTemplateSettingRequest $request
-     * @return JsonResponse
-     */
-    public function updateSetting(UpdateMessageTemplateSettingUseCase $updateMessageTemplateSettingUseCase, UpdateMessageTemplateSettingRequest $request): JsonResponse
+　　　　　　　　public function detail(GetDetailMessageTemplateUseCase $getDetailMessageTemplateUseCase, GetDetailMessageTemplateRequest $getDetailMessageTemplateRequest): JsonResponse
     {
-        return response()->json($updateMessageTemplateSettingUseCase(
-            $this->user()->id,
-            $request
-        ));
-    }
-
-    /**
-     * Register Message Template API
-     *
-     * @author Sayaka Kamei
-     * @param RegisterMessageTemplateUseCase $registerMessageTemplateUseCase
-     * @param RegisterMessageTemplateRequest $request
-     * @return JsonResponse
-     */
-    public function registerMessageTemplate(RegisterMessageTemplateUseCase $registerMessageTemplateUseCase, RegisterMessageTemplateRequest $request): JsonResponse
-    {
-        return response()->json($registerMessageTemplateUseCase($request->message_template));
-    }
-
-    /**
-     * Update Message Template API
-     *
-     * @author Sayaka Kamei
-     * @param UpdateMessageTemplateUseCase $updateMessageTemplateUseCase
-     * @param UpdateMessageTemplateRequest $request
-     * @return JsonResponse
-     */
-    public function update(UpdateMessageTemplateUseCase $updateMessageTemplateUseCase, UpdateMessageTemplateRequest $request): JsonResponse
-    {
-        $updateMessageTemplateDto = new UpdateMessageTemplateDto($request);
-
-        return response()->json($updateMessageTemplateUseCase($updateMessageTemplateDto));
+        return response()->json($getDetailMessageTemplateUseCase($getDetailMessageTemplateRequest->message_template_id));
     }
 }
 
